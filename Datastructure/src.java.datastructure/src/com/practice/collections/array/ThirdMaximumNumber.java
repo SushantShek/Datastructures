@@ -7,7 +7,7 @@ import java.util.Collections;
 
 public class ThirdMaximumNumber {
     public static void main(String[] args) {
-        int[] A = {5,2,2};
+        int[] A = {1,2,2,5,3,5};
         thirdMax(A);
     }
 
@@ -19,12 +19,11 @@ public class ThirdMaximumNumber {
                 samplelist.add(z);
             }
         }
+        Collections.sort(samplelist);
         if(samplelist.size()<3){
-
-              Collections.sort(samplelist);
             max =samplelist.get(samplelist.size()-1);
         }else{
-            max= samplelist.get(2);
+            max= samplelist.get(samplelist.size()-3);
         }
         System.out.println(max);
     return max;
